@@ -1,0 +1,1 @@
+SELECT locations.location_id, street_address, city, state_province, country_name FROM departments INNER JOIN (locations INNER JOIN countries ON locations.country_id = countries.country_id) ON departments.location_id = locations.location_id;

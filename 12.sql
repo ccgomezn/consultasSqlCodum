@@ -1,0 +1,1 @@
+SELECT e.first_name, e.last_name, j_h.start_date, j_h.end_date, j.job_title, d.department_name FROM employees e INNER JOIN ((job_history j_h INNER JOIN jobs j ON j.job_id = j_h.job_id) INNER JOIN departments d ON d.department_id = j_h.department_id) ON e.employee_id = j_h.employee_id WHERE e.salary > 10000;
